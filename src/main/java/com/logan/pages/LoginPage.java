@@ -1,5 +1,6 @@
 package com.logan.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,6 +16,10 @@ public class LoginPage extends BasePage {
     private WebElement passwordTxt;
     @FindBy(how = How.ID, using = "logid1")
     private WebElement loginBtn;
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
 
     public void loginToApplication() {
         super.writeText(this.emailAddressTxt, userName);

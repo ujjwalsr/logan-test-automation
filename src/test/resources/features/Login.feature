@@ -1,3 +1,4 @@
+@gui
 Feature: Login to logan
 
   @test
